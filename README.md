@@ -1,7 +1,7 @@
 # ys-r
 
 ## Install
-`git clone git@github.com:skilbjo/ys-r.git
+`git clone git@github.com:skilbjo/ys-r.git`
 
 ## Connect in R
 Witin R,
@@ -31,39 +31,45 @@ $ ln -s /usr/local/Cellar/freetds/0.95.18/lib/libtdsodbc.so /usr/local/lib/libtd
 `touch ~/.odbc.ini ; vim ~/.odbc.ini`
 
 `~/.odbc.ini`:
-		[ODBC Data Sources]
-		SERVERNAME     = servername
+````
+[ODBC Data Sources]
+	SERVERNAME     = servername
 
-		[servername]
-		Driver	    = /usr/local/lib/libtdsodbc.so
-		Server      = [[servername]]
-		User 	    	= [[redacted]]
-		Password    = [[redacted]]
-		Port        = 1433
-		TDS_Version = 8.0
+[servername]
+	Driver	    = /usr/local/lib/libtdsodbc.so
+	Server      = [[servername]]
+	User 	    	= [[redacted]]
+	Password    = [[redacted]]
+	Port        = 1433
+	TDS_Version = 8.0
+````
 
 `touch ~/.odbc.ini ; vim ~/.odbc.ini`
 
 `~/.odbcinst.ini`:
-		[MSSQL]
-		Description   = Microsoft SQL Server driver
-		Driver        = /usr/local/Cellar/freetds/0.95.18/lib/libtdsodbc.so
+````
+[MSSQL]
+	Description   = Microsoft SQL Server driver
+	Driver        = /usr/local/Cellar/freetds/0.95.18/lib/libtdsodbc.so
+````
 
 `touch ~/.freetds.conf ; vim ~/.freetds.conf`
 
 `~/.freetds.conf`:
-		[global]
-		;	tds version = 4.2
-		;	dump file = /tmp/freetds.log
-		;	debug flags = 0xffff
-		;	timeout = 10
-		;	connect timeout = 10
-		text size = 64512
+````
+[global]
+	;	tds version = 4.2
+	;	dump file = /tmp/freetds.log
+	;	debug flags = 0xffff
+	;	timeout = 10
+	;	connect timeout = 10
+	text size = 64512
 
-		[SERVERNAME]
-			host = [[servername]]
-			port = 1433
-			tds version = 4.2
+[SERVERNAME]
+	host = [[servername]]
+	port = 1433
+	tds version = 4.2
+````
 
 ## In R, install `RODBC`
 	
