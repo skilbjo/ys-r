@@ -65,6 +65,10 @@ data/
 # Mac
 .DS_Store
 
+# R
+*.RData
+*.Rhistory
+
 # Skilbecks SQL stuff
 *.csv
 sql/db/db/coupon_train_db.sql
